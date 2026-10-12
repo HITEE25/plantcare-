@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Details</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <main class="page-wrapper">
+        <h2 class="page-label">Room Details</h2>
+
+        <section class="phone-screen">
+
+            <!-- Status bar -->
+            <div class="status-bar">
+                <span>7:30</span>
+                <div class="status-icons">
+                    <i class="fa-solid fa-signal"></i>
+                    <i class="fa-solid fa-wifi"></i>
+                    <i class="fa-solid fa-battery-full"></i>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="top-nav">
+                <button class="round-btn" id="backBtn"
+                    aria-label="Go back">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+
+                <div class="nav-actions">
+                    <button class="round-btn" id="favoriteBtn"
+                        aria-label="Add to favorites">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button class="round-btn" id="cartBtn"
+                        aria-label="Shopping cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <h1>Enter room details</h1>
+
+            <form id="roomForm">
+
+                <!-- Room type -->
+                <div class="detail-card">
+                    <i class="fa-solid fa-house-chimney card-icon"></i>
+
+                    <div class="card-content">
+                        <label for="roomType">Room type</label>
+                        <p>ex: Bedroom, office</p>
+                    </div>
+
+                    <select id="roomType" required>
+                        <option value="">Select Room type</option>
+                        <option>Bedroom</option>
+                        <option>Living room</option>
+                        <option>Office</option>
+                        <option>Kitchen</option>
+                        <option>Bathroom</option>
+                        <option>Study room</option>
+                    </select>
+                </div>
+
+                <!-- Light availability -->
+                <div class="detail-card">
+                    <i class="fa-solid fa-sun card-icon"></i>
+
+                    <div class="card-content">
+                        <label for="light">Light Availability</label>
+                        <p>How much natural light does your room get?</p>
+                    </div>
+
+                    <select id="light" required>
+                        <option value="">Select</option>
+                        <option>Low</option>
+                        <option>Medium</option>
+                        <option>High</option>
+                    </select>
+                </div>
+
+                <!-- Number of windows -->
+                <div class="detail-card">
+                    <i class="fa-solid fa-window-maximize card-icon"></i>
+
+                    <div class="card-content">
+                        <label for="windows">No. of Windows</label>
+                        <p>How many windows are there in the room?</p>
+                    </div>
+
+                    <div class="counter">
+                        <button type="button" id="decrease"
+                            aria-label="Decrease windows">−</button>
+                        <output id="windowCount">0</output>
+                        <button type="button" id="increase"
+                            aria-label="Increase windows">+</button>
+                    </div>
+                </div>
+
+                <!-- Window direction -->
+                <div class="detail-card">
+                    <i class="fa-solid fa-diamond-turn-right card-icon"></i>
+
+                    <div class="card-content">
+                        <label for="direction">Window Direction</label>
+                        <p>Which direction does your window face?</p>
+                    </div>
+
+                    <select id="direction" required>
+                        <option value="">Select</option>
+                        <option>North</option>
+                        <option>South</option>
+                        <option>East</option>
+                        <option>West</option>
+                        <option>North-East</option>
+                        <option>North-West</option>
+                        <option>South-East</option>
+                        <option>South-West</option>
+                        <option>No windows</option>
+                    </select>
+                </div>
+
+                <!-- Room size -->
+                <div class="detail-card">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center card-icon"></i>
+
+                    <div class="card-content">
+                        <label for="roomSize">Room size</label>
+                        <p>Approximate size of the room</p>
+                    </div>
+
+                    <select id="roomSize" required>
+                        <option value="">Select</option>
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                        <option>Extra large</option>
+                    </select>
+                </div>
+
+                <!-- Pet friendly -->
+                <div class="detail-card pet-card">
+                    <i class="fa-solid fa-paw card-icon"></i>
+
+                    <div class="card-content">
+                        <label>Pet Friendly</label>
+                        <p>Do you have pets at home?</p>
+                    </div>
+
+                    <div class="pet-options">
+                        <button type="button" class="pet-btn"
+                            data-pet="Yes">Yes</button>
+                        <button type="button" class="pet-btn active"
+                            data-pet="No">No</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="next-btn">Next</button>
+
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
