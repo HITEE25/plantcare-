@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f5f3eb">
+    <meta name="description" content="Discover plants, explore plant care, and find the perfect greenery for your home.">
+    <title>PlantCare | Your Plant Companion</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <div class="app">
+
+        <header class="top-bar">
+            <button class="back-btn" id="backBtn" aria-label="Go back">‹</button>
+
+            <div class="top-icons">
+                <button id="searchBtn" aria-label="Search plants">⌕</button>
+                <button id="filterBtn" aria-label="Plant filters">☷</button>
+                <button id="topFav" aria-label="Favourites">♡</button>
+                <button id="cartBtn" aria-label="Shopping cart">🛒</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <p class="eyebrow">YOUR GREEN CORNER</p>
+                    <h1>Bring<br>Greenery<br>to Life</h1>
+                    <p class="hero-description">
+                        Curated plants for every space and every plant parent.
+                    </p>
+                    <button class="shop-btn" id="shopBtn">Shop Now ↗</button>
+                </div>
+
+                <img
+                    class="hero-image"
+                    src="assets/plant.jpg"
+                    alt="Green indoor plant"
+                    fetchpriority="high"
+                >
+            </section>
+
+            <section class="identify-section">
+                <h2>Discover your plant</h2>
+                <p class="section-description">Have a plant you don't know?</p>
+
+                <button class="identify-btn" id="identifyBtn">
+                    <span class="camera-icon" aria-hidden="true">▣</span>
+                    Identify Plant
+                </button>
+
+                <input
+                    type="file"
+                    id="plantImage"
+                    accept="image/*"
+                    capture="environment"
+                    hidden
+                >
+            </section>
+
+            <section class="category-section">
+                <div class="section-heading">
+                    <h2>Explore Categories</h2>
+                </div>
+
+                <div class="categories">
+                    <button class="category" data-category="Indoor">
+                        <span class="category-icon">♧</span>
+                        <span>Indoor</span>
+                    </button>
+
+                    <button class="category" data-category="Favourites">
+                        <span class="category-icon">♡</span>
+                        <span>Favourites</span>
+                    </button>
+
+                    <button class="category" data-category="Low Light">
+                        <span class="category-icon">☼</span>
+                        <span>Low Light</span>
+                    </button>
+
+                    <button class="category" data-category="Pet Friendly">
+                        <span class="category-icon">♧</span>
+                        <span>Pet Friendly</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="position-card">
+                <div>
+                    <h2>Find the perfect spot</h2>
+                    <p>Help your plants thrive in the right place.</p>
+                </div>
+
+                <button class="position-btn" id="positionBtn">
+                    Get Plant Position
+                </button>
+            </section>
+
+            <p class="message" id="message" role="status" aria-live="polite"></p>
+        </main>
+
+        <nav class="bottom-nav" aria-label="Main navigation">
+            <button class="nav-item active" data-page="Home">
+                <span class="nav-icon">⌂</span>
+                <span>Home</span>
+            </button>
+
+            <button class="nav-item" data-page="Care">
+                <span class="nav-icon">♧</span>
+                <span>Care</span>
+            </button>
+
+            <button class="nav-item" data-page="Store">
+                <span class="nav-icon">▤</span>
+                <span>Store</span>
+            </button>
+
+            <button class="nav-item" data-page="Botanist">
+                <span class="nav-icon">☏</span>
+                <span>Botanist</span>
+            </button>
+
+            <button class="nav-item" data-page="Profile">
+                <span class="nav-icon">♙</span>
+                <span>Profile</span>
+            </button>
+        </nav>
+
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>
